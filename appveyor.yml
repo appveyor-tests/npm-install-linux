@@ -11,13 +11,29 @@ init:
 
 test_script:
 #  - sh: curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
-  - nvm install 6.7.0
-  - nvm use 6.7.0
   - nvm list
+  - command -v nvm
   - node --version
-  - npm version
-  - npm install -g npm@5.6.0 || true
-  - npm version
+  - command -v node
+  - npm --version
+  - commanv -v npm
   
+  - npm install -g npm@5.6.0
+
+  - nvm list
+  - command -v nvm
+  - node --version
+  - command -v node
+  - npm --version
+  - commanv -v npm
+
+  - nvm install 6.7.0
+
+  - nvm list
+  - command -v nvm
+  - node --version
+  - command -v node
+  - npm --version
+  - commanv -v npm
 
 build: off
