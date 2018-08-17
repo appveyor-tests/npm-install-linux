@@ -3,13 +3,13 @@ environment:
    APPVEYOR_SSH_BLOCK: true
  
 init:
- - appveyor version
- - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
- - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
- - sh: sudo apt-get -yqq install virt-what
- - sh: sudo virt-what
- 
- test_script:
+  - appveyor version
+  - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
+  - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
+  - sh: sudo apt-get -yqq install virt-what
+  - sh: sudo virt-what
+
+test_script:
   - nvm list
   - npm version
   - npm install -g npm@5.6.0
