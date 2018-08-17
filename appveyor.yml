@@ -10,13 +10,13 @@ init:
   - sh: sudo virt-what
 
 test_script:
-  - sh: curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
+#  - sh: curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
   - nvm install 6.7.0
   - nvm use 6.7.0
   - nvm list
-  - nodejs --version
+  - node --version
   - npm version
-  - npm install -g npm@5.6.0
+  - npm install -g npm@5.6.0 || true
   - npm version
   
 
