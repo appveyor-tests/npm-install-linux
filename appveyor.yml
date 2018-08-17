@@ -10,12 +10,9 @@ init:
   - sh: sudo virt-what
 
 test_script:
-  - nvm list
-  - npm version
-  - npm install -g npm@5.6.0
-  - npm version
   - nvm install 6.7.0
   - nvm use 6.7.0
+  - nvm list
   - nodejs --version
   - npm version
   - npm install -g npm@5.6.0
