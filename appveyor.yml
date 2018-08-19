@@ -35,7 +35,10 @@ test_script:
   - npm --version
   - command -v npm
 
-  - npm install -g npm@6.1.0 #> /dev/null
+  - sh: |
+      trap 'echo "Its a  TRAP!!!"' EXIT
+      set -x
+      npm install -g npm@6.1.0 #> /dev/null
 
   - node --version
   - command -v node
